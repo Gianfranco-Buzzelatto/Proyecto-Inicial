@@ -1,0 +1,57 @@
+<div class="container">
+  <h1>Lista de empleados :</h1>
+</div>
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <table class="table table-hover text-center">
+        <thead class="justify-content-end">
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th> <a href="/admin/empleados/create" class="btn btn-outline-primary" id="RT"> Agregar empleado </a></th>
+        </thead>
+        <thead>
+          <th>id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+          <th>Ocupacion</th>
+          <th>Celular</th>
+          <th>Imagen</th>
+          <th>-</th>
+          <th>-</th>
+        </thead>
+        <tbody>
+          {{#each empleados}}
+            <tr>
+              <td>{{id}}</td> 
+              <td>{{nombre}}</td>
+              <td>{{apellido}}</td>
+              <td>{{email}}</td>
+              <td>{{ocupacion}}</td>
+              <td>{{celular}}</td>
+              <td><img style="border-radius: 50%; object-fit: cover; object-position: center center;" width="150px" height="150px" src="/images/{{uuid}}" alt=" no se puede cargar la imagen"></td>
+              <td><a href="/admin/empleados/update/{{id}}" class="btn btn-success">Editar <i class="fas fa-user-edit"></i> </a></td>
+              <td><a href="/admin/empleados/delete/{{id}}" class="btn btn-danger">Eliminar <i class="fas fa-user-minus"></i></a></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+    <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>

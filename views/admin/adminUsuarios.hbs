@@ -1,0 +1,51 @@
+<div class="container">
+  <h1>Lista de usuarios :</h1>
+</div>
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <table class="table table-hover text-center">
+        </thead>
+        <thead>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Habilitado<br> 1= Si <br> 0 = No</th>
+          <th>Administrador<br> 1= Si <br> 0 = No</th>
+          <th>Ver mas</th>
+          <th>Habilitar </th>
+          <th>Deshabilitar </th>
+          <th>Editar </th>
+          <th>Eliminar </th>
+          <th></th>
+          <th></th>
+        </thead>
+        <tbody>
+          {{#each usuarios}}
+            <tr>
+              <td>{{nombre}}</td>
+              <td>{{apellido}}</td>
+              <td>{{habilitado}}</td>
+              <td>{{admin}}</td>
+              <td><a href="/admin/usuarios/single/{{id}}" class="btn" id="adminFun"><i class="far fa-eye"></i></a></td>
+              <td><a href="/admin/usuarios/habilitar/{{id}}" class="btn btn-success"><i class="fas fa-check-circle"></i> </a></td>
+              <td><a href="/admin/usuarios/deshabilitar/{{id}}" class="btn btn-danger"><i class="far fa-times-circle"></i></a></td>
+              <td><a href="/admin/usuarios/update/{{id}}" class="btn btn-success"><i class="fas fa-user-edit"></i> </a></td>
+              <td><a href="/admin/usuarios/delete/{{id}}" class="btn btn-danger"><i class="fas fa-user-minus"></i></a></td>
+              <td><td><a href="/admin/usuarios/administrador/{{id}}" class="btn btn-success">Convertir en admin <i class="fas fa-check-circle"></i></a></td></td>
+              <td><td><a href="/admin/usuarios/noAdministrador/{{id}}" class="btn btn-danger">Quitar de admin  <i class="far fa-times-circle"></i></a></td></td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+     <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>

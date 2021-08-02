@@ -1,0 +1,133 @@
+<div class="container-fluid regis">
+  <div style="display:flex; justify-content:center">
+    <form class="formRegis" method="post" action="/registro/create" >
+      <h2 style="display:flex ;justify-content: center;">Registrate</h2>
+      <div class="mb-3">
+        <div class="row">
+          <div class="col">
+            <label
+              for="nombre"
+              class="form-label"
+              style="margin: 5px"
+            >Nombre<span style="color: red;">*</span></label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese su nombre"
+              style="width: 230px; margin: 5px; margin-right:2px"
+            />
+          </div>
+          <div class="col">
+            <label
+              for="apellido"
+              class="form-label"
+              style="margin: 5px"
+            >Apellido<span style="color: red;">*</span></label>
+            <input
+              type="text"
+              class="form-control"
+              id="apellido"
+              name="apellido"
+              placeholder="Ingrese su apellido"
+              style="width: 230px; margin: 5px; margin-left:2px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label
+          for="mail"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Email<span style="color: red;">*</span></label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          aria-describedby="emailHelp"
+          placeholder="Ingrese su mail"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="usuario"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Usuario</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          name="username"
+          placeholder="Ingrese un usuario"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="direccion"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Direccion<span style="color: red;">*</span></label>
+        <input
+          type="text"
+          class="form-control"
+          id="direccion"
+          name="direccion"
+          placeholder="Ingrese su direccion"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="celular"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Celular/Whatsapp<span style="color: red;">*</span></label>
+        <input
+          type="tel"
+          class="form-control"
+          id="celular"
+          name="celular"
+          placeholder="Ingrese su numero"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="fecha" class="form-label" style="margin-left: 10px;">Fecha de nacimiento</label>
+        <input
+          type="date"
+          class="form-control"
+          id="fechaDeNacimiento"
+          name="fecha_de_nacimiento"
+          placeholder="Ingrese su fecha de nacimiento. Ej: 26/06/2020"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="pass" class="form-label" style="margin-left: 10px;">Contraseña<span style="color: red;">*</span></label>
+        <input
+          type="password"
+          class="form-control"
+          id="pass"
+          name="contraseña"
+          placeholder="Ingrese su contraseña"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="registerBtn">
+        <button
+          style="width: 50%;"
+          type="submit"
+          class="btn btn-iniciarSn"
+        >Registrarme</button>
+      </div>
+      <h3 class="text-center" style="font-size: 15px;">{{message}}</h3>
+    </form>
+  </div>
+</div>

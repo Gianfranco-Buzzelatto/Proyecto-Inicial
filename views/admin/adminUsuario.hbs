@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Usuario : # {{usuarios.id}}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover text-center">
+        <thead>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Usuario</th>
+          <th>Email</th>
+          <th>Contraseña</th>
+          <th>Direccion</th>
+          <th>Celular</th>
+          <th>Fecha de nacimiento</th>
+        </thead>
+        <tbody>
+            <tr>
+              <td>{{usuarios.id}}</td>
+              <td>{{usuarios.nombre}}</td>
+              <td>{{usuarios.apellido}}</td>
+              <td>{{usuarios.email}}</td>
+              <td>{{usuarios.contraseña}}</td>
+              <td>{{usuarios.direccion}}</td>
+              <td>{{usuarios.celular}}</td>
+              <td>{{usuarios.fecha_de_nacimiento}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+    <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>

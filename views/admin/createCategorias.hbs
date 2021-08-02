@@ -1,0 +1,27 @@
+<div class="container">
+  <form method="post" action="/admin/categorias/create" class="container col-6 mt-10" style="background-color: #000; margin-block:25px">
+    <h2>Crear categoria</h2>
+    <div class="mb-3">
+      <label class="form-label"> Nombre <span style="color: red;">*</span></label>
+      <input
+        type="text"
+        class="form-control"
+        name="categoria"
+        id="categoria"
+        placeholder="Ingrese el nombre de la nueva categoria"
+      />
+    </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-dark" style="margin-block: 10px;">Agregar categoria</button>
+    </div>
+  </form>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+     <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>

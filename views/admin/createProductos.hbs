@@ -1,0 +1,79 @@
+<div class="container">
+  <form method="post" action="/admin/productos/create" enctype="multipart/form-data" class="container col-6 mt-10" style="background-color: #000; margin-block:25px">
+    <h2>Crear producto</h2>
+    <div class="mb-3">
+      <label class="form-label">Producto <span style="color: red;">*</span></label>
+      <input
+        type="text"
+        class="form-control"
+        name="nombre"
+        id="nombre"
+        placeholder="Ingrese el nombre del producto"
+      />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Categorias<span style="color: red;">*</span></label>
+      <select name="id_categorias" class="from-select" id="id_categorias">
+        {{#each categorias}}
+          <option value="{{id}}"> {{categoria}}</option>
+        {{/each}}
+      </select>
+    </div>
+        <div class="mb-3">
+      <label class="form-label">Precio<span style="color: red;">*</span></label>
+      <input
+        type="number"
+        class="form-control"
+        name="precio"
+        id="precio"
+        placeholder="Ingrese el nombre del producto"
+      />
+    </div>
+        <div class="mb-3">
+      <label class="form-label">Stock<span style="color: red;">*</span></label>
+      <input
+        type="number"
+        class="form-control"
+        name="stock"
+        id="stock"
+        placeholder="Ingrese el nombre del producto"
+      />
+    <div class="mb-3">
+      <label class="form-label">Descripcion<span style="color: red;">*</span></label>
+      <input
+        type="text"
+        class="form-control"
+        name="descripcion"
+        id="descripcion"
+        placeholder="Ingrese una descripcion del producto"
+      />
+    </div>
+    <div class="mb-3">
+        <label
+          for="imagen"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Agregar imagen<span style="color: red;">*</span></label>
+        <input
+          type="file"
+          class="form-control"
+          id="imagen"
+          name="imagen"
+          placeholder="Ingrese su imagen"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+    <div class="d-grid gap-2">
+      <button type="submit" class="btn btn-dark" style="margin-block: 10px;">Agregar producto</button>
+    </div>
+  </form>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+     <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>

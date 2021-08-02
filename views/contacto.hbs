@@ -1,0 +1,31 @@
+<div class="container-fluid" id="fondoContact">
+    <form class="container col-6 contactForm" style="background-color: transparent;" method="post" action="/contacto/mensaje">
+            <h2 class="log" >Escribanos su consulta</h2>
+        <div class="mb-3">
+            <label class="form-label">Nombre <span style="color: red;">*</span></label>
+            <input id="nombreContacto" name="nombre" type="text" class="form-control" placeholder="Ingrese su nombre">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Apellido <span style="color: red;">*</span></label>
+            <input id="apellidoContacto" name="apellido" type="text" class="form-control" placeholder="Ingrese su apellido">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail" class="form-label">Email <span style="color: red;">*</span></label>
+            <input id="mailContacto" name="email" type="email" class="form-control" placeholder="Ingrese su mail">
+        </div>
+        <div class="mb-3">
+            <label for="celular" class="form-label">Celular</label>
+            <input id="telefonoContacto" name="celular" type="tel" class="form-control" placeholder="Ingrese su celular">
+        </div>
+        <div class="mb-3">
+            <label  class="form-label">Mensaje <span style="color: red;">*</span></label>
+            <textarea name="mensaje" id="msg" cols="30" rows="10" placeholder="Ingrese su mensaje/consulta"></textarea>
+        </div>
+        <div class="mb-3">
+            <p style="color: #efde2c;">*Su consulta tendra una respuesta dentro de las 24hs.</p>
+        </div>
+        <div class="botones mb-3">
+            <button type="submit" class="btn btn-iniciarSn" >Enviar mensaje</button> 
+        </div> 
+    </form>
+</div>

@@ -1,0 +1,102 @@
+  <div class="container" style="text-align: center;">
+      <h1>¡Bienvenido/a a Janz Burgers!</h1>
+  </div>
+<div class="container-fluid">
+  <div
+    id="carouselExampleFade"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+    style="box-shadow: 0px 20px 30px #000;"
+  >
+    <div class="carousel-inner" style="width: 100%; height: 100%">
+      <div class="carousel-item active">
+        <img
+          src="/images/jan.png"
+          class="d-block w-100"
+          alt="Imagen no disponible"
+          style="object-fit: cover; object-position: center center;"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/images/jann.png"
+          class="d-block w-100"
+          alt="Imagen no disponible"
+          style="object-fit: cover; object-position: center center;"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/images/jannn.png"
+          class="d-block w-100"
+          alt="Imagen no disponible"
+          style="object-fit: cover; object-position: center center;"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="/images/jannnn.png"
+          class="d-block w-100"
+          alt="Imagen no disponible"
+          style="object-fit: cover; object-position: center center;"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleFade"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+<span><br /><br /></span>
+
+<div class="container">
+  <div class="row" style="margin:15px">
+    {{#each menu}}
+      <div class="col">
+        <div class="cardMenu" style="width: 288px;">
+          <div class="card-body">
+            <img
+            src="/images/{{uid}}"
+            class="card-img-top"
+            alt="Imagen no disponible"
+            style="object-fit: cover; object-position: center center;"
+            width="150px" height="150px" 
+          />
+            <h5 class="card-title">{{nombre}}</h5>
+            <p class="card-text">Precio: ${{precio}}. </p>
+            <p class="card-text">Quedan {{stock}} disponibles</p>
+            <p class="card-text"> <!--descripcion--> {{descripcion}}</p>
+            <p class="card-text"> Categoria : {{categoriaCategorias}}</p>
+            <div class="btnCardMenu" style="justify-content:center">
+              <a
+                href="#"
+                class="btn btn-dark"
+                style="background-color:#000; color:#efde2c; margin:7px"
+              >Comprar <i class="fas fa-shopping-basket"></i></a>
+              <a
+                href="/menu/single/{{id}}"
+                class="btn btn-dark"
+                style="background-color: #efde2c; color:#000; margin:7px"
+              >Ver mas <i class="far fa-eye"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container" >
+    <h1 style="justify-content: center;">Quienes somos?</h1>
+    <p>Nuestra pequeño emprendimiento comenzo en pleno 2020, año de la pandemia mundial. La idea comenzo con un video que encontro en YouTube, Gianfranco (Creador de Janz Burges) que por intriga ingreso a ver el video de TFTS que justamente estaba enseñando a hacer pan junto con Fraco Kalifon (famoso panadero del sector), quien realiza el pan para las hamburgueserias mas importantes de Buenos Aires. <br> En ese momento a Gian se le ocurrio la idea de comenzar a hacer el pan, practicar, ya que durante la cuarentena estudiaba pero necesitaba distraerse. <br> Y asi empezo a practicar, practicar y practicar. Consulto diferentes recetas hasta que llego a la que mas le convencia. <br>Gian, con ayuda de su familia comenzo el 26 de junio del 2020 a comercializar sus hamburguesas caseras. Al principio no salian bien esteticamente, pero las ganas de aprender, de salir adelante siempre estuvieron y con el apoyo de los clientes fue mejorando dia a dia.</p>
+</div>
+<div class="container">
+        <div class="row">
+              <div class="col-12 d-flex justify-content-center">
+                  <div class="card" style="width: 18rem;">
+                    <img src="/images/725ce8f8-1fab-47b8-845d-3ce7540b6900.jpeg" class="card-img-top" alt="Imagen no disponible">
+                    <div class="card-body">
+                      <h5 class="card-title">Buzzelatto, Gianfranco</h5>
+                      <p class="card-text">Fundador y gerente de Janz Burgers</p>
+                    </div>
+                  </div>
+              </div>
+        </div>   
+        <div class="col-6 d-flex justify-content-evenly">
+          {{#each somos}}
+            <div class="col">
+              <div class="cardMenu" style="width: 288px;">
+                <div class="card-body">
+                  <img
+                  src="/images/{{uuid}}"
+                  class="card-img-top"
+                  alt="Imagen no disponible"
+                  style="object-fit: cover; object-position:center center;"
+                  width="150px" height="150px" 
+                />
+                  <h5 class="card-title">{{apellido}}, {{nombre}}</h5>
+                  <p class="card-text"> {{ocupacion}}</p>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+        </div> 
+</div>

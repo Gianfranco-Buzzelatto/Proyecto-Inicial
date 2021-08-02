@@ -1,0 +1,39 @@
+<div class="container">
+    <h1 style="justify-content: center;">Mensajes</h1> 
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <table class="table table-hover text-center">
+                <thead>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Mensajes</th>
+                    <th>Fecha del mensaje</th>
+                </thead>
+                <tbody>
+                    {{#each mensajes}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{nombre}}</td>
+                        <td>{{apellido}}</td>
+                        <td>{{mensaje}}</td>
+                        <td>{{ts_create}}</td>
+                        <td><a href="/admin/mensajes/{{id}}" id="adminFun"> Ver más</a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+    <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>

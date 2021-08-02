@@ -1,0 +1,324 @@
+body{
+    background-color: #efde2c !important;
+}
+header{
+    background-color: #000;
+}
+.navbar-collapse{
+    background-color:#000;
+    display: grid;
+    justify-content: space-around;
+}
+.nav-link{
+    color: #000 !important;
+    background-color:#efde2c;
+    margin-left:50px;
+    border: outset #fff;
+    box-shadow: 4px 5px 2px #fff;
+}
+.nav-link:hover{
+    color: white !important;
+    background-color:#000;
+    border: inset #efde2c;
+    transition-duration: 0.5s;
+    
+}
+.nav-item{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5cm;
+    margin-top: auto;
+}
+.bg-color{
+    background-color: #000;
+}
+
+.burger{
+    color: #fff !important;
+}
+footer{
+    background-color: #000;
+    color: #fff !important;
+}
+.column{
+    column-count: 5;
+    text-align: justify;
+}
+
+#foot{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 50px;
+}
+.fab{
+    color: #efde2c;
+}
+.fab:hover{
+    transform: scale(1.1)
+}
+.redes{
+    display: grid;
+    justify-content: space-evenly;
+}
+.redItems{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 10cm;
+}
+.terminos{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+.gian{
+    color: #fff;
+}
+.gian:hover{
+    color: #efde2c;
+}
+
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    margin-top: 70px;
+    size: 190px;
+}
+.suscrip{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+    font-style: italic;
+}
+.inicioS{
+    background-color: #000;
+    border-style: solid;
+    border-color: #000;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    width: 375px;
+    float:left;
+    line-height: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    font-style: normal;
+    box-shadow: 20px 30px 25px #000;
+    line-height: 35px;
+}
+.form-control{
+    background-color: #efde2c !important;
+}
+.form-label{
+    color: #fff;
+}
+.form-check{
+    color: #fff;
+}
+.log{
+    color: #fff;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+label{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+.botones{
+    display: grid;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn-iniciarSn{
+    background-color: #000 !important;
+    color: #fff !important;
+    border: #efde2c;
+    border-style: outset;
+    margin-bottom: 15px;
+    border-style: solid auto;
+    border-color: #000 !important;
+}
+.btn-iniciarSn:hover{
+    background-color: #efde2c !important;
+    color: #000 !important;
+    margin-bottom: 15px;
+    border-style: solid auto;
+    border-color: #000 !important;
+    transition: 1s;
+}
+.btn-registroBtn{
+    color: #efde2c !important;
+    background-color: #000 !important;
+    margin-block-end: 10px;
+}
+.btn-registroBtn:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px #efde2c;
+}
+.regis{
+    color: #efde2c !important;
+}
+.logoInicio{
+    transition: 2s;
+}
+.logoInicio:hover{
+    transform: scale(1.12);
+    transition: 1.5s;
+}
+#msg{
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #000;
+    background-color: #efde2c;
+    border: #efde2c;
+    border-style: outset;
+}
+.card-body {
+    display: grid;
+    justify-content: center;
+    box-shadow: #000 0px 15px 10px;
+    background-color: #000;
+    color: #fff;
+    margin: 15px;
+}
+.btnCardMenu {
+    margin: 8px;
+}
+.card-img-top{
+    animation-delay: 1s;
+}
+.container > form:nth-child(1) > h2:nth-child(1) {
+    justify-content: center;
+    color:#fff;
+    display: flex;
+    font-size: 40px;
+}
+.registerBtn{
+    display: flex;
+    justify-content: center;
+}
+.regis{
+    background-image: url(https://sevilla.abc.es/gurme/wp-content/uploads/sites/24/2014/10/hamburguesas-960x540.jpg);
+    background-size: cover;
+    margin-block: 15px;
+}
+.formRegis{
+    background-color: #000;
+    width: 505px;
+    margin: 10px;
+    box-shadow: #000 0px 0px 50px;
+}
+.ii a[href] {
+    color: #efde2c;
+}
+.pedido{
+    font-size: 25px;
+    text-decoration: none;
+    color: #000;
+}
+.pedido:hover{
+    color:#fff;
+}
+.btn-pedido{
+    border: 2px;
+    border-style: ridge;
+    border-color: #fff;
+    margin: 15px;
+    background-color: #efde2c;
+}
+.btn-pedido:hover{
+    background-color: #000;
+     border-color: #efde2c;
+    }
+.up{
+    background-color: #000;
+}
+body > footer:nth-child(5) > div:nth-child(1) > img:nth-child(1) {
+    margin-top: -2px;
+}
+#IS{
+    color: #efde2c;
+    background-color: #000;
+    border-color: #efde2c;
+  }
+  
+#IS:hover {
+    background-color: #efde2c;
+    border-color: #000;
+    color: #000;
+  }
+#RT{
+    color: #42b72a;
+    background-color: #000;
+    border-color: #42b72a;
+}  
+#RT:hover {
+    background-color: #42b72a;
+    border-color: #42b72a;
+    color: #000;
+  }
+#footMenu{
+    color: #efde2c;
+    text-decoration: none;
+}
+#footMenu:hover{
+    color: #fff;
+    transform: scale(1.1);
+}
+div.col-12:nth-child(2) > h2:nth-child(2) {
+    color: #efde2c;
+    font-family: "Barlow Condensed";
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .btn-pedido {
+    font-family: Montserrat;
+  }
+#probaste{
+    color: #efde2c;
+    display: flex; 
+    justify-content:center
+}
+.imgProbaste{
+    transition: 2s;
+}
+.imgProbaste:hover{
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+.imgInicial{
+    transition: 2s;
+}
+.imgInicial:hover{
+    transform: scale(1.15);
+    transition: 1.5s;
+}
+#fondoContact{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(/images/fondoContact.png);
+    background-size: cover;
+    background-position: center;
+}
+#adminFun{
+    color: #efde2c;
+    background-color: #000;
+    border-color: #efde2c;
+}
+#adminFun:hover{
+    background-color: #efde2c;
+    border-color: #000;
+    color: #000;
+}
+  
+  

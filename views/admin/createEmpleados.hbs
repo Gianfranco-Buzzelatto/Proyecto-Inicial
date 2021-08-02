@@ -1,0 +1,124 @@
+<div class="container-fluid regis">
+  <div style="display:flex; justify-content:center">
+    <form
+      class="formRegis"
+      method="post"
+      action="/admin/empleados/create"
+      enctype="multipart/form-data"
+    >
+      <h2 style="display:flex ;justify-content: center;">Registrar empleado</h2>
+      <div class="mb-3">
+        <div class="row">
+          <div class="col">
+            <label
+              for="nombre" 
+              class="form-label"
+              style="margin: 5px"
+            >Nombre<span style="color: red;">*</span></label>
+            <input
+              type="text"
+              class="form-control"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese su nombre"
+              style="width: 230px; margin: 5px; margin-right:2px"
+            />
+          </div>
+          <div class="col">
+            <label
+              for="apellido"
+              class="form-label"
+              style="margin: 5px"
+            >Apellido<span style="color: red;">*</span></label>
+            <input
+              type="text"
+              class="form-control"
+              id="apellido"
+              name="apellido"
+              placeholder="Ingrese su apellido"
+              style="width: 230px; margin: 5px; margin-left:2px"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label
+          for="mail"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Email<span style="color: red;">*</span></label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          name="email"
+          aria-describedby="emailHelp"
+          placeholder="Ingrese su mail"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="direccion"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Ocupacion<span style="color: red;">*</span></label>
+        <input
+          type="text"
+          class="form-control"
+          id="ocupacion"
+          name="ocupacion"
+          placeholder="Ingrese su ocupacion"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+       <div class="mb-3">
+        <label
+          for="celular"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Celular<span style="color: red;">*</span></label>
+        <input
+          type="tel"
+          class="form-control"
+          id="celular"
+          name="celular"
+          placeholder="Ingrese su celular"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+      <div class="mb-3">
+        <label
+          for="imagen"
+          class="form-label"
+          style="margin-left: 10px;"
+        >Agregar imagen<span style="color: red;">*</span></label>
+        <input
+          type="file"
+          class="form-control"
+          id="imagen"
+          name="imagen"
+          placeholder="Ingrese su imagen"
+          style="margin:10px ; width: 485px"
+        />
+      </div>
+
+      <div class="registerBtn">
+        <button
+          style="width: 50%;"
+          type="submit"
+          class="btn btn-iniciarSn"
+        >Registrar</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+    <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>

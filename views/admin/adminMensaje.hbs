@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>Mensaje : # {{mensaje.id}} de {{mensaje.nombre}}, {{mensaje.apellido}}</h1>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover text-center">
+        <thead>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Mensaje</th>
+          <th>Email</th>
+          <th>Celular</th>
+          <th>Fecha del mensaje</th>
+        </thead>
+        <tbody>
+            <tr>
+              <td>{{mensaje.nombre}}</td>
+              <td>{{mensaje.apellido}}</td>
+              <td>{{mensaje.mensaje}}</td>
+              <td>{{mensaje.email}}</td>
+              <td>{{mensaje.celular}}</td>
+              <td>{{mensaje.ts_create}}</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="container " >
+  <div class="col" style="display: flex; justify-content:space-evenly">
+     <a class="btn btn-primary" id="adminFun" href="/admin/usuarios">Usuarios</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/productos">Productos</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/categorias">Categorias</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/empleados">Empleados</a>
+    <a class="btn btn-primary" id="adminFun" href="/admin/mensajes">Mensajes</a>
+  </div>
+</div>
