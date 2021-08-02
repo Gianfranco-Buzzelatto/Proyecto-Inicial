@@ -13,7 +13,6 @@ const getUsuario = async (req, res) => {
     console.log(usuarios, id);
     res.render ('admin/adminUsuario', {usuarios, title: 'Usuario'});
 }
-
 const showUpdate =  async(req, res) =>{
     const {id} = req.params;
     const [usuarios] = await model.getSingle(id);

@@ -9,14 +9,18 @@
             <th></th>
             <th></th>
             <th></th>
+            <th></th>
+            <th></th>
             <th><a href="/admin/productos/create" class="btn btn-outline-primary" id="RT"> Agregar producto </a></th>
         </thead>
         <thead>
           <th>id</th>
           <th>Nombre</th>
           <th>Stock</th>
-          <th>imagen</th>
+          <th>Imagen</th>
           <th>-</th>
+          <th>Habilitar</th>
+          <th>Deshabilitar</th>
           <th>-</th>
           <th>-</th>
         </thead>
@@ -28,6 +32,8 @@
               <td>{{stock}}</td>
               <td><img style="object-fit: cover; object-position: center center;" width="150px" height="150px" src="/images/{{uid}}" alt="No es posible cargar la imagen"></td>
               <td><a href="/menu/single/{{id}}" class="btn btn-info" id="adminFun">Ver mas <i class="far fa-eye"></i></a></td>
+              <td><a href="/admin/productos/habilitar/{{id}}" class="btn btn-success"><i class="fas fa-check-circle"></i> </a></td>
+              <td><a href="/admin/productos/deshabilitar/{{id}}" class="btn btn-danger"><i class="far fa-times-circle"></i></a></td>
               <td><a href="/admin/productos/update/{{id}}" class="btn btn-success">Editar <i class="far fa-edit"></i> </a></td>
               <td><a href="/admin/productos/delete/{{id}}" class="btn btn-danger">Eliminar <i class="fas fa-trash-alt"></i></a></td>
             </tr>

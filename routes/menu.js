@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const { getAll, getSingle} = require("../models/menu");
+const { getSingle, getAllHabilitados} = require("../models/menu");
 const model = require('./../models/usuarios');
 
 const all = async (req, res) => {
-  const menu = await getAll();
+  const menu = await getAllHabilitados();
   res.render("menu", { menu, title: "Menu" });
 };
 

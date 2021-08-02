@@ -6,6 +6,11 @@ const getAll = async() => {
     const params = [process.env.T_PRODUCTOS, process.env.T_IMAGENESPRODUCTOS, process.env.T_CATEGORIAS]
     return await pool.query(query, params);
 }
+const getAllHabilitados = async () => {
+    const query = "SELECT p.nombre, p.stock, p.precio, p.descripcion, p.id, c.categoria, pI.uid, c.categoria AS categoriaCategorias FROM ?? AS p JOIN ?? AS pI ON p.id = pI.id_producto JOIN ?? AS c ON p.id_categorias = c.id WHERE p.eliminado = 0 AND p.habilitado = 1";
+    const params = [process.env.T_PRODUCTOS, process.env.T_IMAGENESPRODUCTOS, process.env.T_CATEGORIAS];
+    return await pool.query (query, params);
+}
 const getSingle = async(id) => {
     const query = "SELECT p.nombre, p.stock, p.precio, p.descripcion, p.id, c.categoria, pI.uid, c.categoria AS categoriaCategorias FROM ?? AS p JOIN ?? AS pI ON p.id = pI.id_producto JOIN ?? AS c ON p.id_categorias = c.id WHERE p.id = ? AND p.eliminado = 0"
     const params = [process.env.T_PRODUCTOS,process.env.T_IMAGENESPRODUCTOS ,process.env.T_CATEGORIAS, id]
@@ -45,7 +50,16 @@ const delImg = async(id) => {
     } catch(error){
         console.error(error);
 }}
+const habilitar = async(id) => {
+    const query = "UPDATE ?? SET habilitado = 1 WHERE id = ?";
+    const params = [process.env.T_PRODUCTOS, id];
+    return await pool.query(query, params);
+}
+const deshabilitar = async(id) => {
+    const query = "UPDATE ?? SET habilitado = 0 WHERE id = ?";
+    const params = [process.env.T_PRODUCTOS, id];
+    return await pool.query(query, params);
+}
 
 
-
-module.exports = {getAll, getSingle, create, update, del, delImg, updateImage};
+module.exports = {getAll, getSingle, create, update, del, delImg, updateImage, habilitar, deshabilitar, getAllHabilitados};

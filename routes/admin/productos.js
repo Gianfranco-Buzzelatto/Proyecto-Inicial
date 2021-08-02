@@ -38,6 +38,16 @@ const del = async (req, res) => {
     const messageImg = await model.delImg(id);
     res.redirect('/admin/productos');
 }
+const habil = async (req, res) => {
+    const {id} = req.params;
+    const messageId = await model.habilitar(id);
+    res.redirect('/admin/productos');
+}
+const deshabil = async (req, res) => {
+    const {id} = req.params;
+    const messageId = await model.deshabilitar(id);
+    res.redirect('/admin/productos');
+}
 
 router.get('/', get);
 router.get('/create', showCreate);
@@ -45,4 +55,6 @@ router.post('/create',upload.single("imagen") ,createP);
 router.get('/update/:id', showUpdate);
 router.post('/update/:id',upload.single("imagen") , update);
 router.get('/delete/:id', del);
+router.get('/habilitar/:id', habil);
+router.get('/deshabilitar/:id', deshabil);
 module.exports = router;
