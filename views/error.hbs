@@ -1,11 +1,12 @@
-<div class="container-fluid" style="background-image:url(/images/404.png)">
-<div class="container justify-content-center">
-<h1>Problem is: {{message}}</h1>
-<h2><b>{{error.status}}</b></h2>
-<pre>{{error.stack}}</pre>
+<div class="container" style="background-image:url(/images/error.png); background-size:cover">
+<div class="container">
+<h1 class="text-center text-danger" style="line-height: 138px;"><b>Problem is:   {{message}}</b></h1>
+<h2 class="text-center" style="color: #efde2c;"><b>{{error.status}}</b></h2><br>
+<div class="container text-center">
+    <pre style="color: #fff;font-size:x-small;">{{error.stack}}</pre>
+</div>
 </div>
 <div class="container" style="display: grid; justify-content:center">
-<button style="background-color:#000; font-size:25px; color:#efde2c; margin-block:10px"> <a href="/"> Volver al menu principal</a>
-</button>
+<a class="btn" style="margin-block:20px" id="IS" href="/"> Volver al menu principal</a>
 </div>
 </div>

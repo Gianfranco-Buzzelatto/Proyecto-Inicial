@@ -4,7 +4,7 @@
 
  const createEmpleado = async (body, file) => {
     try{
-        const {insertId : id_empleados} = await model.createcreate(body); 
+        const {insertId : id_empleados} = await model.create(body); 
         const uid = imgFile(file);
         const obj = {id_empleados, uid};
         const {insertId : idImg} = await imagenesEmpleados(obj);

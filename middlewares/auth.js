@@ -11,7 +11,7 @@ const verifyAdmin = (req, res, next) => {
         next();
     }
     else {
-        res.render('noAutorizado', {title: 'Unathorized ❌', message: 'Debes ser administrador para acceder'})
+        res.render('noAutorizado', {title: 'Unathorized ❌', messages: 'Debes ser administrador para acceder'})
     }
 }
 

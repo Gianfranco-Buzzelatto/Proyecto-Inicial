@@ -12,7 +12,7 @@ const get = async (req, res) => {
     res.render('admin/adminEmpleados', {empleados , title: "Administrador"});
 }
 const showCreate = (req, res) => {
-    res.render('admin/createEmpleados');
+    res.render('admin/createEmpleados', {title: "Administrador"});
 }
 
 const createE = async (req, res) => {

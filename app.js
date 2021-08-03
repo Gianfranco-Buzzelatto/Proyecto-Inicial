@@ -14,7 +14,6 @@ const menuRouter = require('./routes/menu');
 const contactoRouter = require('./routes/contacto');
 const quienesRouter = require('./routes/quienesSomos');
 const registroRouter = require('./routes/registro')
-const cuponesRouter = require('./routes/cupones');
 const loginRouter = require ('./routes/login');
 const adminIndex = require('./routes/admin/index');
 const adminCategorias =require ('./routes/admin/categorias');
@@ -36,6 +35,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+const store = new session.MemoryStore;
+
 app.use(session({
   secret: 'gian', 
   cookie : {maxAge: null},
@@ -52,7 +53,6 @@ app.use('/users', verifyUsuario, usersRouter);
 app.use('/menu', verifyUsuario, menuRouter);
 app.use('/contacto',contactoRouter);
 app.use('/quienesSomos', verifyUsuario,quienesRouter);
-app.use('/cupones', verifyUsuario,cuponesRouter);
 
 //Admin
 app.use('/admin', verifyAdmin , adminIndex);

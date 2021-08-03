@@ -320,5 +320,11 @@ div.col-12:nth-child(2) > h2:nth-child(2) {
     border-color: #000;
     color: #000;
 }
+#noAutorizado{
+    height: 550px;
+    background-image: url(/images/denegado.png);
+    background-size: cover;
+    background-position: center;
+}
   
   
