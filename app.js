@@ -35,7 +35,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const store = new session.MemoryStore;
 
 app.use(session({
   secret: 'gian', 

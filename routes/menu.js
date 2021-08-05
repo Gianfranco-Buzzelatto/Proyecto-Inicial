@@ -14,9 +14,13 @@ const single = async (req, res) => {
   console.log(producto);
   res.render("menuSingle", { title: "Menu", producto });
 };
+const insertCarrito = async(req,res) => {
+  
+}
 
 router.get('/', all);
 router.get('/single/:id', single);
+router.get('/menu/buy/:id', insertCarrito);
 
 module.exports = router;
  

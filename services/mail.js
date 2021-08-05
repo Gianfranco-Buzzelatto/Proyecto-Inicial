@@ -21,5 +21,26 @@ const send = async({mail, asunto, cuerpo }) => {
         console.log(e);
     }
 }
+const avisoDeMensajes = async({mail, asunto, cuerpo }) => {
+    try{
+    const transporter = nodemailer.createTransport({
+        service : process.env.MAIL_SERVICE ,
+        auth : {
+            user: process.env.MAIL_USER,
+            pass: process.env.MAIL_PASSWORD
+        }
+    });
+    const info = {
+        to: mail,
+        subject: asunto,
+        html: cuerpo 
+    };
+    const {messageId} = await transporter.sendMail(info);
+    return messageId;
+    }
+    catch(e){
+        console.log(e);
+    }
+}
 
-module.exports = {send};
+module.exports = {send, avisoDeMensajes};

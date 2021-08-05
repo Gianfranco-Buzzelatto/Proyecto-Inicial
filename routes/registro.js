@@ -50,7 +50,7 @@ const create = async (req, res) => {
         <table role="presentation" style="width:602px;border-collapse:collapse;border:1px solid #000;border-spacing:0;text-align:left;">
             <tr>
                 <td align="center" style="padding:40px 0 30px 0;background:#efde2c;">
-                    <h1></h1>
+                    <h1>Janz Burgers</h1>
                 </td>
             </tr>
             <tr>
@@ -82,7 +82,7 @@ const create = async (req, res) => {
                                         <table role="presentation" style="border-collapse:collapse;border:0;border-spacing:0;">
                                             <tr>
                                             <td style="padding:0 0 0 10px;width:38px;">
-                                            <button style="background-color:#000;"><a href="${process.env.URL_SERVER}:${process.env.PORT}/registro/verify/${usuarioF.confirmacion_correo}"> <b> Confirmar cuenta </b></a></button>
+                                            <button id:"IS" style="background-color:#000;"><a href="${process.env.URL_SERVER}:${process.env.PORT}/registro/verify/${usuarioF.confirmacion_correo}"> <b> Confirmar cuenta </b></a></button>
                                             </td>
                                             </tr>
                                         </table>
