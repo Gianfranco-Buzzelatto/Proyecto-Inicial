@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const { getSingle, getAllHabilitados} = require("../models/menu");
-const model = require('./../models/usuarios');
+const model = require('./../models/carrito');
+const {verifyUsuario} = require('./../middlewares/auth')
 
 const all = async (req, res) => {
   const menu = await getAllHabilitados();
@@ -14,13 +15,20 @@ const single = async (req, res) => {
   console.log(producto);
   res.render("menuSingle", { title: "Menu", producto });
 };
-const insertCarrito = async(req,res) => {
-  
+const insertaCarrito = async(req, res) => {
+  const {id : id_producto} = req.params;
+  const id_usuario = req.session.usuario;
+  const obj = {
+    id_usuario,
+    id_producto
+  }
+  const {insertId} = await model.insertCarrito(obj);
+  res.redirect('/carrito')
+  console.log(insertId)
 }
 
 router.get('/', all);
 router.get('/single/:id', single);
-router.get('/menu/buy/:id', insertCarrito);
-
+router.get('/carrito/:id', verifyUsuario, insertaCarrito);
 module.exports = router;
  

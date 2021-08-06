@@ -21,6 +21,7 @@ const adminProductos = require ('./routes/admin/productos');
 const adminUsuarios = require ('./routes/admin/usuarios');
 const adminEmpleados = require('./routes/admin/empleados');
 const adminMensajes = require ('./routes/admin/mensajes');
+const carrito = require('./routes/carrito');
 //Aca van los requerimientos  de los modulos
 
 const app = express();
@@ -52,6 +53,7 @@ app.use('/users', verifyUsuario, usersRouter);
 app.use('/menu', verifyUsuario, menuRouter);
 app.use('/contacto',contactoRouter);
 app.use('/quienesSomos', verifyUsuario,quienesRouter);
+app.use('/carrito', verifyUsuario, carrito);
 
 //Admin
 app.use('/admin', verifyAdmin , adminIndex);
@@ -75,7 +77,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error',{title: 'Error ❌'});
 });
 
 module.exports = app;

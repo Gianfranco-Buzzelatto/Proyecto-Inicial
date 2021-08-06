@@ -1,17 +1,18 @@
 <div class="container">
-    <div  style="width: 355px; float:left">
-      <h1 style="color: #fff;" >{{producto.nombre}}</h1>
+    <div style="width: 50%; float:left;">
+      <p id="font-menu" style="color:#efde2c"  class="text-center">{{producto.nombre}}</p>
       <img src="/images/{{producto.uid}}"  alt="No es posible cargar la imagen" style="width:450px">
     </div>
     <div style="width: 50%; float:right;" class="d-flex justify-content-center" >
-        <div class="card-body">
-              <h5 class="card-title">{{producto.nombre}}</h5>
+        <div class="card-body text-center" id="menuSDescripcion">
+              <p class="card-text"> Descripcion: <br> {{producto.descripcion}}</p>
               <p class="card-text">Precio: ${{producto.precio}}. </p>
               <p class="card-text text-danger">Quedan {{producto.stock}} disponibles</p>
-              <p class="card-text"> Descripcion: <br> {{producto.descripcion}}</p>
-            <div class="btnCardMenu" style="justify-content:center">
-                <a href="#" class="btn btn-dark" style="background-color:#000; color:#efde2c; margin:7px">Comprar <i class="fas fa-shopping-basket"></i></a>
-                <a href="#" class="btn btn-dark" style="background-color: #efde2c; color:#000; margin:7px">Agregar al carrito <i class="fas fa-cart-plus"></i></a>
+              <a
+                href="/menu/carrito/{{producto.id}}"
+                class="btn btn-dark"
+                style="background-color:#000; color:#efde2c; margin:7px"
+              >Agregar al carrito <i class="fas fa-cart-plus"></i></a>
             </div>
         </div>
     </div>

@@ -326,5 +326,25 @@ div.col-12:nth-child(2) > h2:nth-child(2) {
     background-size: cover;
     background-position: center;
 }
+#font-menu{
+    width: 355px;
+    float:left;
+    font-family:Beattingvile, sans-serif;
+    font-size: 4rem;
+}
+#font{
+    font-family:monospace;
+    font-size: 2rem;
+}
+#menuSDescripcion{
+    line-height: 95px;
+    font-size: 38px;
+}
+
+.fa-shopping-cart {
+    color: #efde2c;
+    font-size: 23px;
+    line-height: 20px;
+  }
   
   

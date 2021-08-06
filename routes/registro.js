@@ -5,6 +5,7 @@ const sha1 = require("sha1");
 const { v4: uuid } = require("uuid");
 const { send } = require("./../services/mail");
 const {getAll} = require ('./../models/usuarios');
+const {validarRegistro} = require('./../middlewares/usuarios')
 
 
 router.get("/", (req, res) => {
@@ -119,7 +120,7 @@ const verificacion = async (req, res) => {
 };
 
 router.get("/", showRegistro);
-router.post("/create", create);
+router.post("/create",validarRegistro , create);
 router.get("/verify/:uid", verificacion);
 
 module.exports = router;

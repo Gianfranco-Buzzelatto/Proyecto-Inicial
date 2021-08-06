@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="col">
+    <div class="row">
+      <table class="table table-hover text-center">
+        <thead class="justify-content-end">
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th> <a href="/menu" class="btn btn-outline-primary" id="RT"> Agregar producto</a></th>
+        </thead>
+        <thead>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Descripcion</th>
+          <th>-</th>
+          <th>Cantidad</th>
+          <th>Total de tu compra</th>
+        </thead>
+        <tbody>
+            {{#each carrito}}
+            <tr>
+                <td>{{nombre}}</td>
+                <td>$ {{precio}}</td>
+                <td>{{descripcion}}</td>
+                <td><a href="/carrito/compras/{{id_producto}}" class="btn btn-danger"><i class="fas fa-times"></i></a></td>
+                <td>
+                    <input for="cantidad" {{cantidad}} name="cantidad" type="number" style="width: 1cm; heigth:1cm"> 
+                </td>
+                <td>-</td>
+                <td></td>
+            </tr>
+            {{/each}}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>$ {{precioF}}</td>
+                <td><a id="IS" class="btn" href="/carrito/compra">Finalizar compra</a></td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
