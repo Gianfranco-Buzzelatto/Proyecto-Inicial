@@ -1,5 +1,5 @@
 const express = require('express');
-const { mostrarMsj , mostrarMsjs } = require('./../../models/mensaje');
+const { mostrarMsj , mostrarMsjs, del } = require('./../../models/mensaje');
 const router = express.Router();
 
 const getMsj = async (req, res) => {
@@ -14,7 +14,13 @@ const showSingleMsj = async (req, res) => {
   console.log(mensaje, id);
   res.render('admin/adminMensaje', {mensaje, title: 'Mensaje'});
 }
+const borrar = async (req, res) => {
+  const {id} = req.params;
+  const messageId = await del(id);
+  res.redirect('/admin/mensajes');
+}
 
 router.get('/', getMsj);
 router.get('/:id', showSingleMsj);
+router.get('/delete/:id', borrar);
 module.exports = router;
